@@ -10,6 +10,8 @@ export const GifExpertApp = () => {
   ]);
 
   const onAddCategory = (category) => {
+    if (categories.includes(category)) return;
+
     setCategories((prevState) => prevState.concat(category));
   };
 
@@ -18,10 +20,7 @@ export const GifExpertApp = () => {
       {/* title */}
       <h1>GifExpertApp</h1>
       {/* input */}
-      <AddCategory
-        onNewCategory={onAddCategory}
-        currentCategories={categories}
-      />
+      <AddCategory onNewCategory={onAddCategory} />
 
       {/* gif list */}
       <ol>
