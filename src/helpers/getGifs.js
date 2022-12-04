@@ -7,7 +7,6 @@ export const getGifs = async (category) => {
     id: img.id,
     title: img.title,
     url: img.url,
-    image: img.images.downsized_medium.url,
   }));
 
   return gifs;
